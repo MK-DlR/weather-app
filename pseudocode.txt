@@ -1,0 +1,41 @@
+PROJECT
+1. create blank documents
+    1a. html
+    2a. css
+    3a. js
+
+2. write function 
+    2a. that hits visual crossing api
+    2b. take a location
+    2c. and return the weather data for that location
+    2d. console.log the information
+        - for now
+
+3. write functions
+    3a. that process json data
+    3b. retrieved from api
+    3c. and return object
+    3d. with only the required data
+
+4. set up form
+    4a. that lets user input location
+    4b. and will fetch the weather info
+    4c. console.log the information
+        - for now
+
+5. display information on page
+    5a. page should change
+        - depending on the returned weather
+        - can be icons, images, gifs, color, styling, etc
+    5b. optional: dynamically import weather icons
+        - requires webpack
+            - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import
+            - https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import
+
+6. add styling
+
+7. optional: add "loading" component
+    7a. that displays
+    7b. from the time the form is submitted
+    7c. until the information comes back from the api
+    7d. use devtools to simulate network speeds

@@ -1,0 +1,6 @@
+6/4/25:
+
+- Initial deployment
+- Basic webpack setup
+- Create html document and link css and js files
+- Create pseudocode
