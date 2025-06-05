@@ -1,5 +1,7 @@
 6/5/25:
 
+- Add weather display to page when location is searched
+- Adjust data returned by weather search
 - Center search form and buttons vertically and horizontally
 - Add button to bring back up search input after location has been searched
 - Change search to display by default

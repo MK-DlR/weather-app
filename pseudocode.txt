@@ -39,14 +39,17 @@ Done
     Done
 Done
 
-5. display information on page
-    5a. page should change
+5. display on page
+    5a. display information
+    Done
+    5b. page should change
         - depending on the returned weather
         - can be icons, images, gifs, color, styling, etc
-    5b. optional: dynamically import weather icons
+    5c. optional: dynamically import weather icons
         - requires webpack
             - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import
             - https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import
+Wip
 
 6. allow user to toggle 
     - between C

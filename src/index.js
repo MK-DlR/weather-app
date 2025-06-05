@@ -2,7 +2,7 @@
 
 // imports
 import "./styles.css";
-import { getWeather } from "./get-weather.js";
+import { searchWeather } from "./search-weather.js";
 import { searchForm } from "./search-form.js";
 
 // main content div

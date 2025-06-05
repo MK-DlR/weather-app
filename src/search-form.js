@@ -1,6 +1,6 @@
 // search-form.js
 
-import { searchWeather } from "./get-weather";
+import { searchWeather } from "./search-weather";
 
 export function searchForm() {
   // form container
@@ -57,6 +57,7 @@ export function searchForm() {
   // allow enter press to trigger search
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+      // prevent form submission
       event.preventDefault();
       searchWeather();
     }

@@ -8,7 +8,7 @@ export function searchButton() {
 
   const searchFormButton = document.createElement("BUTTON");
   searchFormButton.classList.add("searchFormButton");
-  searchFormButton.textContent = "Search Location";
+  searchFormButton.textContent = "Search Again";
 
   content.appendChild(searchFormButtonContainer);
   searchFormButtonContainer.appendChild(searchFormButton);

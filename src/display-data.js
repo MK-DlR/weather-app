@@ -1,0 +1,50 @@
+// display-data.js
+
+import { processData } from "./process-data";
+
+export function displayData(weatherText) {
+  const displayContainer = document.createElement("div");
+  displayContainer.classList.add("displayContainer");
+
+  // define data structure for content
+  const weatherData = [
+    { label: "Date", value: weatherText[1], index: 1 },
+    { label: "Location", value: weatherText[2], index: 2 },
+    { label: "Description", value: weatherText[3], index: 3 },
+    { label: "Conditions", value: weatherText[4], index: 4 },
+    { label: "Temperature", value: weatherText[5], index: 5 },
+    { label: "Feels Like", value: weatherText[6], index: 6 },
+    { label: "Chance of Precipitation", value: weatherText[7], index: 7 },
+    { label: "Type of Precipitation", value: weatherText[8], index: 8 },
+    { label: "Humidity", value: weatherText[9], index: 9 },
+    { label: "Wind Speed", value: weatherText[10], index: 10 },
+  ];
+
+  // loop through data and create elements
+  weatherData.forEach((item) => {
+    // create container for each weather info item
+    const itemContainer = document.createElement("div");
+    itemContainer.classList.add(
+      `${item.label.toLowerCase().replace(/\s+/g, "")}Container`
+    );
+
+    // create header element
+    const headerText = document.createElement("div");
+    headerText.classList.add("weatherInfoHeader");
+    headerText.textContent = `${item.label}: `;
+    headerText.style.fontWeight = "bold";
+
+    // create content element
+    const contentElement = document.createElement("div");
+    contentElement.classList.add("weatherInfoContent");
+    // handle undefined values
+    contentElement.textContent = item.value || "N/A";
+
+    // append elements
+    itemContainer.appendChild(headerText);
+    itemContainer.appendChild(contentElement);
+    displayContainer.appendChild(itemContainer);
+  });
+
+  content.appendChild(displayContainer);
+}

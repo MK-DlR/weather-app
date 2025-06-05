@@ -1,18 +1,8 @@
-// get-weather.js
+// search-weather.js
 
 import { processData } from "./process-data";
 import { searchForm } from "./search-form";
 import { searchButton } from "./search-button";
-
-export async function getWeather() {
-  const response = await fetch(
-    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/st joseph de coleraine?key=TXQZ7DW5D94ZHWUHPN55WM432",
-    { mode: "cors" }
-  );
-  const weatherData = await response.json();
-  console.log(weatherData);
-  processData(weatherData);
-}
 
 export async function searchWeather() {
   const location = document.getElementById("searchInput")?.value.trim();
@@ -38,8 +28,8 @@ export async function searchWeather() {
   }
 
   content.textContent = "";
-  searchButton();
   const weatherData = await response.json();
   // console.log(weatherData);
   processData(weatherData);
+  searchButton();
 }
