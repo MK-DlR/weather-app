@@ -1,5 +1,8 @@
-65/2/5:
+6/5/25:
 
+- Add form search functionality
+- Create search-weather module to hold search form
+- Create basic form for searching weather, currently nonfunctional
 - Create function to process JSON data and return only required information
 
 6/4/25:

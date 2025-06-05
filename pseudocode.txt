@@ -22,9 +22,22 @@ Done
 
 4. set up form
     4a. that lets user input location
+        - zipcode
+        - city
+        - province/state
+        - country
+    Done
     4b. and will fetch the weather info
+    Done
     4c. console.log the information
         - for now
+    Done
+    4d. put in own module
+        - attached to button
+        - so it can be brought back up again
+        - after searching for weather
+    Done
+Done
 
 5. display information on page
     5a. page should change

@@ -2,14 +2,25 @@
 
 // imports
 import "./styles.css";
-
 import { getWeather } from "./get-weather.js";
+import { searchForm } from "./search-form.js";
 
-import watermelonGif from "../watermelon.gif";
+// main content div
+window.content = document.createElement("div");
+window.content.classList.add("content");
+document.body.appendChild(window.content);
 
-const image = document.createElement("img");
-image.src = watermelonGif;
+// location search button
+const searchFormButtonContainer = document.createElement("div");
+searchFormButtonContainer.classList.add("searchFormButtonContainer");
 
-document.body.appendChild(image);
+const searchFormButton = document.createElement("BUTTON");
+searchFormButton.textContent = "Search Location";
 
-getWeather();
+content.appendChild(searchFormButtonContainer);
+searchFormButtonContainer.appendChild(searchFormButton);
+
+searchFormButton.addEventListener("click", function () {
+  content.textContent = "";
+  searchForm();
+});
