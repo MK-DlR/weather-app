@@ -11,45 +11,15 @@ export function searchForm() {
   const inputForm = document.createElement("FORM");
   inputForm.classList.add("inputForm");
 
-  // zipcode input
-  const zipcodeInputDiv = document.createElement("div");
-  zipcodeInputDiv.classList.add("inputDiv");
-  const zipcodeInputText = document.createElement("h4");
-  zipcodeInputText.classList.add("inputText");
-  zipcodeInputText.textContent = "Zipcode:";
-  const zipcodeInput = document.createElement("INPUT");
-  zipcodeInput.classList.add("inputBox");
-  zipcodeInput.setAttribute("id", "zipcodeInput");
-
-  // city input
-  const cityInputDiv = document.createElement("div");
-  cityInputDiv.classList.add("inputDiv");
-  const cityInputText = document.createElement("h4");
-  cityInputText.classList.add("inputText");
-  cityInputText.textContent = "City/Town:";
-  const cityInput = document.createElement("INPUT");
-  cityInput.classList.add("inputBox");
-  cityInput.setAttribute("id", "cityInput");
-
-  // province input
-  const provinceInputDiv = document.createElement("div");
-  provinceInputDiv.classList.add("inputDiv");
-  const provinceInputText = document.createElement("h4");
-  provinceInputText.classList.add("inputText");
-  provinceInputText.textContent = "Province/State:";
-  const provinceInput = document.createElement("INPUT");
-  provinceInput.classList.add("inputBox");
-  provinceInput.setAttribute("id", "provinceInput");
-
-  // country input
-  const countryInputDiv = document.createElement("div");
-  countryInputDiv.classList.add("inputDiv");
-  const countryInputText = document.createElement("h4");
-  countryInputText.classList.add("inputText");
-  countryInputText.textContent = "Country:";
-  const countryInput = document.createElement("INPUT");
-  countryInput.classList.add("inputBox");
-  countryInput.setAttribute("id", "countryInput");
+  // single search input
+  const searchInputDiv = document.createElement("div");
+  searchInputDiv.classList.add("inputDiv");
+  const searchInputText = document.createElement("h4");
+  searchInputText.classList.add("searchText");
+  searchInputText.textContent = "Enter a location to search...";
+  const searchInput = document.createElement("INPUT");
+  searchInput.classList.add("inputBox");
+  searchInput.setAttribute("id", "searchInput");
 
   // button container
   const buttonContainer = document.createElement("div");
@@ -77,24 +47,15 @@ export function searchForm() {
   // append elements to DOM
   content.appendChild(formContainer);
   formContainer.appendChild(inputForm);
-  inputForm.appendChild(zipcodeInputDiv);
-  zipcodeInputDiv.appendChild(zipcodeInputText);
-  zipcodeInputDiv.appendChild(zipcodeInput);
-  inputForm.appendChild(cityInputDiv);
-  cityInputDiv.appendChild(cityInputText);
-  cityInputDiv.appendChild(cityInput);
-  inputForm.appendChild(provinceInputDiv);
-  provinceInputDiv.appendChild(provinceInputText);
-  provinceInputDiv.appendChild(provinceInput);
-  inputForm.appendChild(countryInputDiv);
-  countryInputDiv.appendChild(countryInputText);
-  countryInputDiv.appendChild(countryInput);
+  inputForm.appendChild(searchInputDiv);
+  searchInputDiv.appendChild(searchInputText);
+  searchInputDiv.appendChild(searchInput);
   inputForm.appendChild(buttonContainer);
   buttonContainer.appendChild(submitInput);
   buttonContainer.appendChild(resetInput);
 
   // allow enter press to trigger search
-  zipcodeInput.addEventListener("keypress", function (event) {
+  searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
       searchWeather();

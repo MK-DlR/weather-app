@@ -1,5 +1,10 @@
 6/5/25:
 
+- Center search form and buttons vertically and horizontally
+- Add button to bring back up search input after location has been searched
+- Change search to display by default
+- Reduce search form to one universal input
+- Fix search button disappearing after searching a location
 - Add form search functionality
 - Create search-weather module to hold search form
 - Create basic form for searching weather, currently nonfunctional

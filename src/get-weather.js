@@ -2,6 +2,7 @@
 
 import { processData } from "./process-data";
 import { searchForm } from "./search-form";
+import { searchButton } from "./search-button";
 
 export async function getWeather() {
   const response = await fetch(
@@ -14,14 +15,9 @@ export async function getWeather() {
 }
 
 export async function searchWeather() {
-  const zipcode = document.getElementById("zipcodeInput")?.value.trim();
-  const city = document.getElementById("cityInput")?.value.trim();
-  const province = document.getElementById("provinceInput")?.value.trim();
-  const country = document.getElementById("countryInput")?.value.trim();
+  const location = document.getElementById("searchInput")?.value.trim();
 
-  let searchTerm = zipcode || city || "";
-  if (province) searchTerm += `, ${province}`;
-  if (country) searchTerm += `, ${country}`;
+  let searchTerm = location;
 
   if (!searchTerm) {
     alert("Please enter a location!");
@@ -42,6 +38,8 @@ export async function searchWeather() {
   }
 
   content.textContent = "";
+  // call function to create button to search again here
+  searchButton();
   const weatherData = await response.json();
   console.log(weatherData);
   processData(weatherData);

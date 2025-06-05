@@ -48,10 +48,15 @@ Done
             - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import
             - https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import
 
-6. add styling
+6. allow user to toggle 
+    - between C
+    - and F
 
-7. optional: add "loading" component
-    7a. that displays
-    7b. from the time the form is submitted
-    7c. until the information comes back from the api
-    7d. use devtools to simulate network speeds
+7. add styling
+Wip
+
+8. optional: add "loading" component
+    8a. that displays
+    8b. from the time the form is submitted
+    8c. until the information comes back from the api
+    8d. use devtools to simulate network speeds
