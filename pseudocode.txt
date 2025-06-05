@@ -18,6 +18,7 @@ Done
     3b. retrieved from api
     3c. and return object
     3d. with only the required data
+Done
 
 4. set up form
     4a. that lets user input location

@@ -1,5 +1,10 @@
+65/2/5:
+
+- Create function to process JSON data and return only required information
+
 6/4/25:
 
+- Create function to get weather data from API and console log it
 - Initial deployment
 - Basic webpack setup
 - Create html document and link css and js files
