@@ -3,6 +3,7 @@ PROJECT
     1a. html
     2a. css
     3a. js
+Done
 
 2. write function 
     2a. that hits visual crossing api
@@ -10,9 +11,10 @@ PROJECT
     2c. and return the weather data for that location
     2d. console.log the information
         - for now
+Done
 
 3. write functions
-    3a. that process json data
+    3a. that process (parse?) json data
     3b. retrieved from api
     3c. and return object
     3d. with only the required data
