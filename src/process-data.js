@@ -6,6 +6,7 @@ export function processData(weatherData) {
     now: new Date(),
     location: `${weatherData.resolvedAddress}`,
     description: `${weatherData.description}`,
+    conditions: `${weatherData.currentConditions.conditions}`,
     temperature: `${weatherData.currentConditions.temp}`,
     feelsLike: `${weatherData.currentConditions.feelslike}`,
     precipChance: `${weatherData.currentConditions.precipprob}%`,

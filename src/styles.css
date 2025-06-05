@@ -25,4 +25,16 @@ body {
   width: 300px;
   height: 25px;
   border-radius: 8px;
+  margin-top: 5px;
+}
+
+.inputButton {
+  margin: 5px;
+  width: 100px;
+  height: 25px;
+}
+
+.searchFormButton {
+  width: 125px;
+  height: 25px;
 }
