@@ -60,7 +60,7 @@ body {
   gap: 10px;
 }
 
-.feelsLikeContainer {
+.feelsLikeContainer, .highLowContainer {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -41,6 +41,30 @@ export function displayData(weatherText) {
   // add °F suffix to feels like temperature
   displayFeelsLike.textContent = `${weatherData[7].value} °F`;
 
+  const highLabel = document.createElement("div");
+  highLabel.classList.add("highLabel");
+  highLabel.textContent = `${weatherData[3].label}: `;
+  highLabel.style.fontWeight = "bold";
+
+  const displayHigh = document.createElement("div");
+  displayHigh.classList.add("displayHigh");
+  // add °F suffix to high temperature
+  displayHigh.textContent = `${weatherData[3].value} °F`;
+
+  const dividingLine = document.createElement("h4");
+  dividingLine.classList.add("dividingLine");
+  dividingLine.textContent = "|";
+
+  const lowLabel = document.createElement("div");
+  lowLabel.classList.add("lowLabel");
+  lowLabel.textContent = `${weatherData[4].label}: `;
+  lowLabel.style.fontWeight = "bold";
+
+  const displayLow = document.createElement("div");
+  displayLow.classList.add("displayLow");
+  // add °F suffix to low temperature
+  displayLow.textContent = `${weatherData[4].value} °F`;
+
   displayContainer.appendChild(temperatureContainer);
   const tempRow = document.createElement("div");
   tempRow.classList.add("tempRow");
@@ -54,13 +78,28 @@ export function displayData(weatherText) {
   feelsLikeContainer.appendChild(feelsLikeLabel);
   feelsLikeContainer.appendChild(displayFeelsLike);
 
+  const highLowContainer = document.createElement("div");
+  highLowContainer.classList.add("highLowContainer");
+  highLowContainer.appendChild(highLabel);
+  highLowContainer.appendChild(displayHigh);
+  highLowContainer.appendChild(dividingLine);
+  highLowContainer.appendChild(lowLabel);
+  highLowContainer.appendChild(displayLow);
+
   temperatureContainer.appendChild(tempRow);
   temperatureContainer.appendChild(feelsLikeContainer);
+  temperatureContainer.appendChild(highLowContainer);
 
   // loop through data and create elements
   weatherData.forEach((item) => {
-    // skip temperature and feels like
-    if (item.index === 7 || item.index === 8) return;
+    // skip high temp, low temp, temperature,  and feels like
+    if (
+      item.index === 4 ||
+      item.index === 5 ||
+      item.index === 7 ||
+      item.index === 8
+    )
+      return;
 
     // create container for each weather info item
     const itemContainer = document.createElement("div");
@@ -88,8 +127,10 @@ export function displayData(weatherText) {
 
   // initialize temperature with the current location values
   initializeTemperature(
-    parseFloat(weatherData[5].value),
-    parseFloat(weatherData[6].value)
+    parseFloat(weatherData[6].value), // temp
+    parseFloat(weatherData[7].value), // feels like
+    parseFloat(weatherData[3].value), // high
+    parseFloat(weatherData[4].value) // low
   );
 
   content.appendChild(displayContainer);
