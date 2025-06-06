@@ -75,8 +75,10 @@ Done
     Done
     6c. style buttons
         - and fun click or hover effect
+    Done
     6d. add semi transparent panel behind weather info
-Wip
+    Done
+Done
 
 8. optional: add "loading" component
     8a. that displays

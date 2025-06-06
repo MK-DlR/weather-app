@@ -1,5 +1,7 @@
 6/6/25:
 
+- Add opaque div behind text and search form
+- Add button styling
 - Add different images to background depending on weather in searched location
 - Update temperature toggle to take high and low temperatures
 - Add high and low temperatures

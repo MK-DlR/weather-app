@@ -2,6 +2,7 @@
 
 import { processData } from "./process-data";
 import { displayData } from "./display-data";
+import { defaultBackground } from "./default-background";
 
 import rainyImage from "./weather-images/rainy.jpg";
 import snowyImage from "./weather-images/snowy.jpg";
@@ -29,5 +30,7 @@ export function backgroundChange(weatherText) {
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center center";
+  } else {
+    defaultBackground();
   }
 }
