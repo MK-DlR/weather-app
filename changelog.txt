@@ -1,5 +1,6 @@
 6/6/25:
 
+- Fix temperature toggle always working off of original search location values
 - Create F -> C / C -> F conversion and toggle button
 - Adjust date formatting
 - Move temperature and feels like to top of weather data display

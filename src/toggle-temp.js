@@ -6,6 +6,8 @@ let originalFeelsF = null;
 export function initializeTemperature(tempF, feelsF) {
   originalTempF = tempF;
   originalFeelsF = feelsF;
+  // reset unit to F when new data loads
+  currentUnit = "F";
 }
 
 export function toggleTemp() {
@@ -17,17 +19,7 @@ export function toggleTemp() {
   console.log("Before:", tempElement.textContent, feelsLikeElement.textContent);
 
   if (currentUnit === "F") {
-    // store original values
-    if (originalTempF === null) {
-      originalTempF = parseFloat(
-        tempElement.textContent.replace(/[^\d.-]/g, "")
-      );
-      originalFeelsF = parseFloat(
-        feelsLikeElement.textContent.replace(/[^\d.-]/g, "")
-      );
-    }
-
-    // convert F to C
+    // convert F to C using the stored original values
     const tempC = Math.round((originalTempF - 32) * (5 / 9) * 10) / 10;
     const feelsC = Math.round((originalFeelsF - 32) * (5 / 9) * 10) / 10;
 

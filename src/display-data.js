@@ -1,6 +1,6 @@
 // display-data.js
 import { processData } from "./process-data";
-import { toggleTemp } from "./toggle-temp.js";
+import { toggleTemp, initializeTemperature } from "./toggle-temp.js";
 import { toggleButton } from "./toggle-button.js";
 
 export function displayData(weatherText) {
@@ -72,6 +72,12 @@ export function displayData(weatherText) {
     itemContainer.appendChild(contentElement);
     displayContainer.appendChild(itemContainer);
   });
+
+  // initialize temperature with the current location's values
+  initializeTemperature(
+    parseFloat(weatherData[4].value),
+    parseFloat(weatherData[5].value)
+  );
 
   toggleButton();
   content.appendChild(displayContainer);

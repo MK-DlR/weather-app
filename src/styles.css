@@ -50,6 +50,11 @@ body {
   font-size: 60px;
 }
 
+.toggleTempButton {
+  width: 150px;
+  height: 25px;
+}
+
 .weatherInfoHeader {
   margin-top: 10px;
 }
