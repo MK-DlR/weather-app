@@ -33,26 +33,55 @@ body {
   margin: 5px;
   width: 100px;
   height: 25px;
+  cursor: pointer;
 }
 
 .searchFormButton {
   width: 125px;
   height: 25px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .displayContainer {
   text-align: center;
 }
 
+.temperatureContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tempRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feelsLikeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
 .displayTemperature {
-  margin-bottom: 10px;
   font-size: 60px;
 }
 
+.toggleButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
 .toggleTempButton {
-  width: 150px;
+  width: 50px;
   height: 25px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .weatherInfoHeader {

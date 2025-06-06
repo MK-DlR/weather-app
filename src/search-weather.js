@@ -29,6 +29,7 @@ export async function searchWeather() {
 
   content.textContent = "";
   const weatherData = await response.json();
+  console.log(weatherData);
   processData(weatherData);
   searchButton();
 }

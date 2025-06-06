@@ -9,6 +9,8 @@ export function processData(weatherData) {
     }/${new Date().getFullYear()}`,
     location: `${weatherData.resolvedAddress}`,
     description: `${weatherData.description}`,
+    high: `${weatherData.days[0].tempmax}`,
+    low: `${weatherData.days[0].tempmin}`,
     conditions: `${weatherData.currentConditions.conditions}`,
     temperature: `${weatherData.currentConditions.temp}`,
     feelsLike: `${weatherData.currentConditions.feelslike}`,
@@ -16,7 +18,8 @@ export function processData(weatherData) {
     precipType:
       weatherData.currentConditions.preciptype === null
         ? "None"
-        : weatherData.currentConditions.preciptype[0],
+        : weatherData.currentConditions.preciptype[0].charAt(0).toUpperCase() +
+          weatherData.currentConditions.preciptype[0].slice(1),
     humidity: `${weatherData.currentConditions.humidity}%`,
     windSpeed: `${weatherData.currentConditions.windspeed} MPH`,
   };

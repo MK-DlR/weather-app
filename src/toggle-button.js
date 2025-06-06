@@ -2,22 +2,20 @@
 
 import { toggleTemp } from "./toggle-temp";
 
-export function toggleButton() {
+export function toggleButton(container) {
   const toggleButtonContainer = document.createElement("div");
   toggleButtonContainer.classList.add("toggleButtonContainer");
 
-  const toggleTempButton = document.createElement("BUTTON");
+  const toggleTempButton = document.createElement("button");
   toggleTempButton.classList.add("toggleTempButton");
-  toggleTempButton.textContent = "Toggle Temperature";
+  toggleTempButton.textContent = "°F/°C";
 
-  content.appendChild(toggleButtonContainer);
   toggleButtonContainer.appendChild(toggleTempButton);
+  container.appendChild(toggleButtonContainer); // append inside temperatureContainer
 
   toggleTempButton.addEventListener("click", function () {
-    // query for the elements before trying using
     const tempElement = document.querySelector(".displayTemperature");
     const feelsLikeElement = document.querySelector(".displayFeelsLike");
-
     toggleTemp();
   });
 }

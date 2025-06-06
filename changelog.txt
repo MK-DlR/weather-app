@@ -1,5 +1,8 @@
 6/6/25:
 
+- Add high and low temperatures
+- Create basic weather type modules to handle changing page display
+- Style temperature toggle button
 - Fix temperature toggle always working off of original search location values
 - Create F -> C / C -> F conversion and toggle button
 - Adjust date formatting
