@@ -1,3 +1,11 @@
+6/6/25:
+
+- Create F -> C / C -> F conversion and toggle button
+- Adjust date formatting
+- Move temperature and feels like to top of weather data display
+- Remove temperature and feels like from forEach loop in displayData
+- Adjust weather data formatting for better legibility 
+
 6/5/25:
 
 - Add weather display to page when location is searched

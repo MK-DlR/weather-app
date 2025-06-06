@@ -1,6 +1,7 @@
 // display-data.js
-
 import { processData } from "./process-data";
+import { toggleTemp } from "./toggle-temp.js";
+import { toggleButton } from "./toggle-button.js";
 
 export function displayData(weatherText) {
   const displayContainer = document.createElement("div");
@@ -20,8 +21,34 @@ export function displayData(weatherText) {
     { label: "Wind Speed", value: weatherText[10], index: 10 },
   ];
 
+  const temperatureContainer = document.createElement("div");
+  temperatureContainer.classList.add("temperatureContainer");
+
+  const displayTemperature = document.createElement("h1");
+  displayTemperature.classList.add("displayTemperature");
+  // add °F suffix to temperature
+  displayTemperature.textContent = `${weatherData[4].value} °F`;
+
+  const feelsLikeLabel = document.createElement("div");
+  feelsLikeLabel.classList.add("feelsLikeLabel");
+  feelsLikeLabel.textContent = `${weatherData[5].label}: `;
+  feelsLikeLabel.style.fontWeight = "bold";
+
+  const displayFeelsLike = document.createElement("div");
+  displayFeelsLike.classList.add("displayFeelsLike");
+  // add °F suffix to feels like temperature
+  displayFeelsLike.textContent = `${weatherData[5].value} °F`;
+
+  displayContainer.appendChild(temperatureContainer);
+  temperatureContainer.appendChild(displayTemperature);
+  temperatureContainer.appendChild(feelsLikeLabel);
+  temperatureContainer.appendChild(displayFeelsLike);
+
   // loop through data and create elements
   weatherData.forEach((item) => {
+    // skip temperature and feels like
+    if (item.index === 5 || item.index === 6) return;
+
     // create container for each weather info item
     const itemContainer = document.createElement("div");
     itemContainer.classList.add(
@@ -46,5 +73,6 @@ export function displayData(weatherText) {
     displayContainer.appendChild(itemContainer);
   });
 
+  toggleButton();
   content.appendChild(displayContainer);
 }

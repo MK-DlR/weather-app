@@ -14,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 }
 
 .searchText, .buttonContainer {
@@ -37,4 +38,18 @@ body {
 .searchFormButton {
   width: 125px;
   height: 25px;
+  margin-top: 10px;
+}
+
+.displayContainer {
+  text-align: center;
+}
+
+.displayTemperature {
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+
+.weatherInfoHeader {
+  margin-top: 10px;
 }

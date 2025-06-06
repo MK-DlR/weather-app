@@ -45,6 +45,7 @@ Done
     5b. page should change
         - depending on the returned weather
         - can be icons, images, gifs, color, styling, etc
+        - unsplash background image that changes with weather result?
     5c. optional: dynamically import weather icons
         - requires webpack
             - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import
@@ -52,10 +53,23 @@ Done
 Wip
 
 6. allow user to toggle 
-    - between C
-    - and F
+    - between temperature types
+        - F -> C
+        - C -> F
+    Done
+    - beside displayed temperature
+    Wip
+Wip
 
 7. add styling
+    6a. vaguely emulate google style search
+    Done
+    6b. format weather data nicely
+        - weather icon above data (?)
+        - "search again" button underneath data
+        Done
+    6c. style buttons
+        - and fun click or hover effect
 Wip
 
 8. optional: add "loading" component
