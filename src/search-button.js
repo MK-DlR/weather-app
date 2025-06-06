@@ -15,6 +15,7 @@ export function searchButton() {
 
   searchFormButton.addEventListener("click", function () {
     content.textContent = "";
+    document.body.style.backgroundImage = "";
     searchForm();
   });
 }

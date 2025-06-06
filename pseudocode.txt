@@ -45,15 +45,17 @@ Done
     5b. page should change
         - depending on the returned weather
         - unsplash background image that changes with weather result
-            - clear = sunny image
-            - partially cloudy = cloudy image
-            - rain = rainy image
-    Wip
+            - type of precipitation outweighs conditions:
+                - rain = rainy image
+            - conditions:
+                - clear = sunny image
+                - partially cloudy = cloudy image
+    Done
     5c. optional: dynamically import weather icons
         - requires webpack
             - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import
             - https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import
-Wip
+Done
 
 6. allow user to toggle 
     - between temperature types
@@ -69,11 +71,11 @@ Done
     6a. vaguely emulate google style search
     Done
     6b. format weather data nicely
-        - weather icon above data (?)
         - "search again" button underneath data
-        Done
+    Done
     6c. style buttons
         - and fun click or hover effect
+    6d. add semi transparent panel behind weather info
 Wip
 
 8. optional: add "loading" component

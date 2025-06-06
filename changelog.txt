@@ -1,5 +1,6 @@
 6/6/25:
 
+- Add different images to background depending on weather in searched location
 - Update temperature toggle to take high and low temperatures
 - Add high and low temperatures
 - Create basic weather type modules to handle changing page display

@@ -2,6 +2,7 @@
 import { processData } from "./process-data";
 import { toggleTemp, initializeTemperature } from "./toggle-temp.js";
 import { toggleButton } from "./toggle-button.js";
+import { backgroundChange } from "./background-change.js";
 
 export function displayData(weatherText) {
   const displayContainer = document.createElement("div");
@@ -134,4 +135,5 @@ export function displayData(weatherText) {
   );
 
   content.appendChild(displayContainer);
+  backgroundChange(weatherText);
 }
